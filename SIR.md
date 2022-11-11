@@ -1,1 +1,5 @@
+#The SIR Model
 
+One simple model used to characterise the way diseases spread is the SIR model. SIR is an acronym for Susceptible, Infected, Recovered. These are incidentally the populations you would track in the model. The variable we are most interested in is the amount of people infected. This variable is influenced by an inflow from the susceptible population, and an outflow into the recovered population. The amount of people who get infected by the disease is equal to the transistion rate $\beta$, times the susceptible population $S$ times the infected population $I$, normalized over the size of the population $N$. $\beta$ is a parameter that models the disease by being the product of the average amount of contacts per person per timestep and the probability of transmission per contact, so it could itself be split up into further parameters, possible $n$ and $p$. The amount of people who recover is determined by the product of $\gamma$ times $I$, with $\gamma$ being the inverse of the time a person is infectious in timesteps, $D$.
+
+The total inflow-outflow equation for $\frac{dI}{dt}$ would be given as $\frac{\beta I S}{N} - \gamma I$
